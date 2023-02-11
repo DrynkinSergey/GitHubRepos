@@ -12,12 +12,8 @@ const Pagination = ({ postsPerPage, totalPosts, paginate, currentPage }) => {
             <button>Previous</button>
             <div className={s.pagination_pages}>
                 {pageNumbers.map(number => (
-
-
-                    <span key={number} >
-                        <a className={`${currentPage === number ? s.currentPage : ' '}`} onClick={() => paginate(number)} href='!#'>
-                            {number}
-                        </a>
+                    <span key={number} className={`${s.page} ${currentPage === number ? s.currentPage : ''}`} onClick={() => paginate(number)}>
+                        {number}
                     </span>
                 ))}
             </div>

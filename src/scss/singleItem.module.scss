@@ -14,6 +14,11 @@
         font-size: calc($sizeIndex*.5);
     }
 
+    @media(max-width:$md) {
+        grid-template-columns: min-content 3fr;
+
+    }
+
     &_img {
         width: 120px;
         height: 120px;
