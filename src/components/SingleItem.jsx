@@ -7,7 +7,9 @@ import userIcon from './../assets/userIcon.svg';
 const SingleItem = ({ name, desc, language, url, author, stars, watchers }) => {
     return (
         <div className={s.singleItem}>
-            <div className={s.singleItem_img}> <img src={url} alt='userImg' /></div>
+            <div className={s.singleItem_img}>
+                <img src={url} alt='userImg' />
+            </div>
             <div className={s.singleItem_userInfo}>
                 <h1>Name: {name}</h1>
                 <h3>Author: {author}</h3>

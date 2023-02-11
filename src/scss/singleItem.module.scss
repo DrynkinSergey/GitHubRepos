@@ -12,7 +12,6 @@
 
     @media (min-width:$lg) {
         font-size: calc($sizeIndex*.5);
-
     }
 
     &_img {
@@ -35,7 +34,6 @@
 
     &_stats {
         display: grid;
-
 
         span img {
             width: 15px;

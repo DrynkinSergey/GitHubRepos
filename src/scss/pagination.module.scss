@@ -1,21 +1,33 @@
 @import './variables';
 
+
+
 .pagination {
     display: grid;
     font-weight: bold;
-    font-size: calc($sizeIndex*.7);
+    font-size: 1.2rem;
     gap: 10px;
     justify-items: center;
     justify-content: center;
     grid-template-columns: repeat(3, min-content);
     padding: calc($sizeIndex);
 
+    @media (max-width:$sm) {
+        font-size: calc($sizeIndex);
+    }
+
     &_pages {
         display: flex;
-        gap: 15px;
+        gap: 25px;
+
+        .currentPage {
+            border-bottom: #65B79A 3px solid;
+            padding: 5px;
+        }
     }
 
     button {
+        font-size: 1.2rem;
         background-color: inherit;
         border: none;
         font-weight: bold;

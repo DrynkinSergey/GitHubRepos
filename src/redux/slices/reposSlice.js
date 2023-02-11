@@ -19,8 +19,6 @@ export const fetchRepositories = createAsyncThunk(
 )
 
 
-
-
 export const reposSlice = createSlice({
     name: 'repos',
     initialState,
@@ -53,6 +51,6 @@ export const reposSlice = createSlice({
     }
 })
 
-export const { getItems, setQuery } = reposSlice.actions
+export const { setQuery } = reposSlice.actions
 
 export default reposSlice.reducer
