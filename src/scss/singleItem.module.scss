@@ -1,0 +1,44 @@
+@import './variables';
+
+.singleItem {
+    border-radius: 16px;
+    padding: calc($sizeIndex);
+    font-size: calc($sizeIndex);
+    width: 100%;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: min-content 3fr 1fr;
+    margin-bottom: 20px;
+
+    @media (min-width:$lg) {
+        font-size: calc($sizeIndex*.5);
+
+    }
+
+    &_img {
+        width: 120px;
+        height: 120px;
+        background: linear-gradient(321.69deg, #4481EB 0%, #04BEFE 100%);
+        border-radius: 4px;
+        margin-right: 10px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &_userInfo {
+        gap: 5px;
+        display: grid;
+
+    }
+
+    &_stats {
+        display: grid;
+
+
+        span img {
+            width: 15px;
+        }
+    }
+}

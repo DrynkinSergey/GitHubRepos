@@ -1,0 +1,23 @@
+@import './variables';
+
+.pagination {
+    display: grid;
+    font-weight: bold;
+    font-size: calc($sizeIndex*.7);
+    gap: 10px;
+    justify-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, min-content);
+    padding: calc($sizeIndex);
+
+    &_pages {
+        display: flex;
+        gap: 15px;
+    }
+
+    button {
+        background-color: inherit;
+        border: none;
+        font-weight: bold;
+    }
+}
