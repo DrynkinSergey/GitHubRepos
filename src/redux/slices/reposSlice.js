@@ -7,7 +7,8 @@ const baseUrl = `https://api.github.com/search/repositories?`;
 const initialState = {
     repos: [],
     status: 'Loading',
-    query: 'React'
+    query: 'React',
+    currentPage: 1
 }
 export const fetchRepositories = createAsyncThunk(
     'repos/fetchRepos',
@@ -25,6 +26,9 @@ export const reposSlice = createSlice({
     reducers: {
         setQuery: (state, { payload }) => {
             state.query = payload;
+        },
+        setCurrentPage: (state, { payload }) => {
+            state.currentPage = payload;
         },
     },
     extraReducers: {
@@ -51,6 +55,6 @@ export const reposSlice = createSlice({
     }
 })
 
-export const { setQuery } = reposSlice.actions
+export const { setQuery, setCurrentPage } = reposSlice.actions
 
 export default reposSlice.reducer

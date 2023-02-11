@@ -9,9 +9,8 @@ import './scss/_glogal.scss'
 function App() {
 
 
-  const [currentPage, setCurrentPage] = React.useState(1);
   const [postsPerPage] = React.useState(3);
-  const { repos, query, status } = useSelector(state => state.repos);
+  const { repos, query, status, currentPage } = useSelector(state => state.repos);
   const dispatch = useDispatch();
   //add debounce for our search request 
   const debouncedValue = useDebounce(query, 500)
@@ -28,8 +27,6 @@ function App() {
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = repos.slice(indexOfFirstPost, indexOfLastPost);
 
-  // Change page
-  const paginate = pageNumber => setCurrentPage(pageNumber);
 
   return (
     <div className="app">
@@ -42,8 +39,7 @@ function App() {
         <Pagination
           postsPerPage={postsPerPage}
           totalPosts={repos.length}
-          paginate={paginate}
-          currentPage={currentPage} />
+        />
       </div>
     </div>
   )

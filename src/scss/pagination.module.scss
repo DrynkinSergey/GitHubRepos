@@ -48,6 +48,7 @@
         background-color: inherit;
         border: none;
         font-weight: bold;
+        cursor: pointer;
 
         @media (max-width:$sm) {
             font-size: calc($sizeIndex*1.1);
